@@ -33,6 +33,15 @@ set background=dark
 set termguicolors
 set colorcolumn=120
 
+" Show “invisible” characters
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set list
+" Highlight searches
+set hlsearch
+" Ignore case of searches
+set ignorecase
+set incsearch
+
 " cursor (these make rendering slow)
 set cursorline
 "set cursorcolumn
@@ -92,6 +101,8 @@ set directory=~/.vim/swapfiles/
 " edit json
 let g:vim_json_conceal=0
 
+let mapleader = "\<space>"
+
 " center searches
 nmap gg ggzz
 nmap  n nzz
@@ -132,6 +143,17 @@ nnoremap t7  :tabnext 7<CR>
 nnoremap t8  :tabnext 8<CR>
 nnoremap t9  :tabnext 9<CR>
 
+" For ease of adding blank lines
+nnoremap <leader>o o<esc>
+nnoremap <leader>O O<esc>
+
+" project explorer
+nnoremap <leader>pv :Ex<CR>
+
+" keep cursor in middle when navigating
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
 " go to last active tab
 if !exists('g:lasttab')
     let g:lasttab = 1
@@ -155,6 +177,7 @@ autocmd FileType yml,yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=<:>
 " OpenCL like C
 au BufRead,BufNewFile *.cl set filetype=c
 
+" Install vim-plug if not installed
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
                 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

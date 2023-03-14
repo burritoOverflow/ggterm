@@ -31,7 +31,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 fi
 
 cd ./submodules/powerline-shell
-sudo python setup.py install
+sudo python3 setup.py install
 cd ../../
 #ln -f -s ${PWD}/submodules/powerline-shell/powerline-shell.py ~/.powerline-shell.py
 
@@ -64,8 +64,8 @@ ln -f -s ${PWD}/.myenv ~/.myenv
 ln -f -s ${PWD}/.gdbinit ~/.gdbinit
 ln -f -s ${PWD}/.gitconfig ~/.gitconfig
 
-mkdir ~/.vim/swapfiles
-mkdir ~/.vim/undodir
+mkdir -p ~/.vim/swapfiles
+mkdir -p ~/.vim/undodir
 
 git update-index --assume-unchanged .gitconfig
 

@@ -143,6 +143,10 @@ nnoremap t7  :tabnext 7<CR>
 nnoremap t8  :tabnext 8<CR>
 nnoremap t9  :tabnext 9<CR>
 
+" Splitting and navigating to the created pane
+nnoremap <leader>h :split<CR><C-w>j<CR>
+nnoremap <leader>v :vsplit<CR><C-w>l<CR>
+
 " For ease of adding blank lines
 nnoremap <leader>o o<esc>
 nnoremap <leader>O O<esc>
@@ -153,6 +157,9 @@ nnoremap <leader>pv :Ex<CR>
 " keep cursor in middle when navigating
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
+
+" open Undotree and nav to that pane
+nnoremap <leader>u :UndotreeToggle<CR><C-w>h<CR>
 
 " go to last active tab
 if !exists('g:lasttab')
@@ -238,6 +245,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'elzr/vim-json'
 "Plug 'Konfekt/FastFold'
+Plug 'mbbill/undotree'
 
 " colorthemes
 Plug 'dracula/vim', { 'name': 'dracula' }
@@ -560,12 +568,12 @@ au FileType c,cpp vnoremap <buffer><leader>lf :JbzClangFormat<CR>
 " colortheme
 try
     " dracula theme
-    colorscheme dracula
+    " colorscheme dracula
     ""hi Pmenu guibg=#128060
 
     " gruvbox theme
-    "let g:gruvbox_contrast_dark = 'hard'
-    "colorscheme gruvbox
+    let g:gruvbox_contrast_dark = 'medium'
+    colorscheme gruvbox
 
     " PaperColor
     "colorscheme PaperColor

@@ -154,9 +154,14 @@ nnoremap <leader>O O<esc>
 " project explorer
 nnoremap <leader>pv :Ex<CR>
 
+" show window list
+nnoremap <leader>w :Windows<CR>
+
 " keep cursor in middle when navigating
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
+nnoremap { {zz
+nnoremap } }zz
 
 " open Undotree and nav to that pane
 nnoremap <leader>u :UndotreeToggle<CR><C-w>h<CR>

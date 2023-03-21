@@ -1,4 +1,4 @@
-colorscheme dracula
+colorscheme gruvbox
 set visualbell t_vb=
 set guifont=Ubuntu\ Mono\ 10
 

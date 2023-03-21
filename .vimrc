@@ -147,6 +147,10 @@ nnoremap t9  :tabnext 9<CR>
 nnoremap <leader>h :split<CR><C-w>j<CR>
 nnoremap <leader>v :vsplit<CR><C-w>l<CR>
 
+" buffer navigation
+nnoremap <leader>bp :bprev<CR>
+nnoremap <leader>bn :bnext<CR>
+
 " For ease of adding blank lines
 nnoremap <leader>o o<esc>
 nnoremap <leader>O O<esc>
@@ -481,9 +485,9 @@ let g:make_arguments = '-j$(($(getconf _NPROCESSORS_ONLN) - 2))'
 let g:cmake_build_dir = 'build-debug/'
 let g:cmake_build_executor = 'dispatch'
 
-nmap <silent> <leader>r :CMakeRunFromBuildDir <C-R>=g:cmake_run_last_args<CR><CR>
-nmap          <leader>R :CMakeRunFromBuildDir <C-R>=g:cmake_run_last_args<CR><RIGHT>
-nmap <silent> <leader>b :CMakeBuild<CR>
+nmap <silent> <leader>cr :CMakeRunFromBuildDir <C-R>=g:cmake_run_last_args<CR><CR>
+nmap          <leader>cR :CMakeRunFromBuildDir <C-R>=g:cmake_run_last_args<CR><RIGHT>
+nmap <silent> <leader>cb :CMakeBuild<CR>
 nmap <silent> <leader>B :FZFCMakeSelectTarget<CR>
 
 " vim-disaptch

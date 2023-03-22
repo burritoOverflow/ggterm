@@ -158,6 +158,14 @@ nnoremap <leader>O O<esc>
 " project explorer
 nnoremap <leader>pv :Ex<CR>
 
+" terminal in split window
+map <leader>t :term ++close<CR>
+tmap <leader>t <C-w>:term ++close<cr>
+
+" terminal in new tab
+map <leader>T :tab term ++close<cr>
+tmap <leader>T <c-w>:tab term ++close<cr>
+
 " show window list
 nnoremap <leader>w :Windows<CR>
 

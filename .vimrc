@@ -44,7 +44,7 @@ set incsearch
 
 " cursor (these make rendering slow)
 set cursorline
-"set cursorcolumn
+set cursorcolumn
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
@@ -268,6 +268,7 @@ Plug 'mbbill/undotree'
 Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'joshdick/onedark.vim'
 
 " zig
 Plug 'ziglang/zig.vim'
@@ -490,7 +491,7 @@ highlight CopilotSuggestion guifg=#00aaaa ctermfg=8
 
 " cmake4vim
 let g:make_arguments = '-j$(($(getconf _NPROCESSORS_ONLN) - 2))'
-let g:cmake_build_dir = 'build-debug/'
+let g:cmake_build_dir = 'build/'
 let g:cmake_build_executor = 'dispatch'
 
 nmap <silent> <leader>cr :CMakeRunFromBuildDir <C-R>=g:cmake_run_last_args<CR><CR>
@@ -589,11 +590,14 @@ try
     ""hi Pmenu guibg=#128060
 
     " gruvbox theme
-    let g:gruvbox_contrast_dark = 'medium'
-    colorscheme gruvbox
+    " let g:gruvbox_contrast_dark = 'medium'
+    " colorscheme gruvbox
 
     " PaperColor
-    "colorscheme PaperColor
+    " colorscheme PaperColor
+
+    " OneDark
+    colorscheme onedark
 
     hi Comment cterm=bold
 catch /^Vim\%((\a\+)\)\=:E185/

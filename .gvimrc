@@ -1,5 +1,6 @@
-colorscheme gruvbox
+colorscheme tokyonight
 set visualbell t_vb=
-set guifont=Ubuntu\ Mono\ 10
+set guifont=Hack\ 10.46
 
 hi Normal guibg=#080A16
+let g:airline_theme = "tokyonight"

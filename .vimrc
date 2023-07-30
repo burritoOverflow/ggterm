@@ -269,6 +269,7 @@ Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'joshdick/onedark.vim'
+Plug 'ghifarit53/tokyonight-vim'
 
 " zig
 Plug 'ziglang/zig.vim'
@@ -598,6 +599,10 @@ try
 
     " OneDark
     colorscheme onedark
+
+    " TokyoNight
+    let g:tokyonight_style = 'storm'
+    let g:tokyonight_enable_italic = 0 
 
     hi Comment cterm=bold
 catch /^Vim\%((\a\+)\)\=:E185/
